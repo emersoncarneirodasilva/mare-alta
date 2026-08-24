@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+/* 1. Definição das variáveis base (Modo Claro - Elegância Praiana / Oceano) */
+:root {
+  --background: #fbf9f8cc;
+  --background-alt: #efeded;
+  --background-header: #fbf9f8;
+  --background-card: #fbf9f8;
+  --text-main: #1b1c1c;
+  --text-muted: #43474f;
+  --primary: #001e40;
+  --secondary: #d8885c;
+  --border: #43474f;
+}
+
+/* 2. Definição das variáveis para o modo Dark (Harmonizado) */
+[data-theme="dark"] {
+  --background: #1d2530;
+  --background-alt: #171d26;
+  --background-header: #1d2530;
+  --background-card: #1d2530;
+  --text-main: #f2f2f3;
+  --text-muted: #9da2ab;
+  --primary: #739ac5;
+  --secondary: #e29d76;
+  --border: #9da2ab;
+}
+
+/* 3. Mapeamento para o Tailwind usando @theme inline */
+@theme inline {
+  --color-background: var(--background);
+  --color-background-alt: var(--background-alt);
+  --color-background-header: var(--background-header);
+  --color-background-card: var(--background-card);
+  --color-text-main: var(--text-main);
+  --color-text-muted: var(--text-muted);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-border: var(--border);
+
+  --font-serif: var(--font-playfair-display);
+  --font-sans: var(--font-inter);
+
+  --max-site-width: 1440px;
+  --side-padding: 1.5rem;
+
+  --animate-float: float 8s ease-in-out infinite;
+  --animate-wave: wave 12s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+
+/* 4. Camada base e utilitários */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+  }
+
+  body {
+    @apply bg-background text-text-main antialiased transition-colors duration-300 font-sans;
+  }
+
+  .wrapper {
+    @apply w-full max-w-(--max-site-width) mx-auto px-(--side-padding);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif text-text-main transition-colors duration-300;
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  /* Animação de Onda Global */
+  @keyframes wave {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(-25%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-wave {
+    animation: var(--animate-wave);
+  }
+
+  /* 5. Scrollbar Personalizada e Elegante */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary) var(--background-alt);
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--background-alt);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--primary);
+    border-radius: 9999px;
+    border: 2px solid var(--background-alt);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: var(--secondary);
+  }
+}

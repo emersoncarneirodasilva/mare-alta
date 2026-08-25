@@ -1,37 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌊 Maré Alta Hotel & Suítes
 
-## Getting Started
+> Site institucional moderno, responsivo e de alta performance desenvolvido para o **Maré Alta Hotel**, localizado na charmosa região de Ponta Negra, em Natal (RN). 
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## ✨ Sobre o Projeto
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+O **Maré Alta** foi planejado para oferecer uma experiência digital acolhedora e sofisticada aos futuros hóspedes. O projeto destaca a localização privilegiada na "Cidade do Sol", apresenta comodidades exclusivas, acomodações detalhadas e facilita o canal direto de reservas e dúvidas através de integração fluida com o WhatsApp.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Construído com uma arquitetura moderna focada em velocidade, o site utiliza exportação estática, permitindo hospedagem ultra rápida e segura em provedores de nuvem como o Cloudflare Pages.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🚀 Tecnologias Utilizadas
 
-To learn more about Next.js, take a look at the following resources:
+Este projeto foi desenvolvido com uma stack moderna e atualizada:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Framework:** [Next.js 16](https://nextjs.org/) (App Router com suporte a exportação estática)
+- **Biblioteca UI:** [React 19](https://react.dev/)
+- **Estilização:** [Tailwind CSS 4](https://tailwindcss.com/) via PostCSS
+- **Ícones:** [Lucide React](https://lucide.dev/)
+- **Notificações:** [Sonner](https://sonner.emilkowal.ski/)
+- **Tipografia:** `next/font` (`Playfair Display` e `Inter`)
+- **Linguagem:** [TypeScript](https://www.typescriptlang.org/)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🗺️ Estrutura de Rotas
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+| Rota | Descrição |
+| :--- | :--- |
+| `🏠 /` | Página inicial (Hero, diferenciais, destaques e atrações) |
+| `🏨 /o-hotel` | História, diferenciais e espaços do hotel |
+| `🛏️ /acomodacoes` | Catálogo de apartamentos (Individual, Duplo, Familiar e Master) |
+| `✨ /comodidades` | Serviços, lazer e comodidades disponíveis |
+| `📞 /contato` | Canais de atendimento, mapa de localização e formulário |
+| `🔒 /privacidade` | Política de privacidade |
+| `📄 /termos` | Termos de uso do serviço |
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# mare-alta
+---
+
+## ⚙️ Variáveis de Ambiente
+
+Crie um arquivo `.env.local` na raiz do projeto baseando-se no exemplo abaixo. *Todas as variáveis são opcionais*, pois a aplicação conta com mecanismos de fallback inteligentes:
+
+```env
+NEXT_PUBLIC_WEATHER_API_KEY=sua-chave-weatherapi
+NEXT_PUBLIC_WHATSAPP_NUMBER=558499999999
+NEXT_PUBLIC_PHONE_NUMBER=+55 (84) 99999-9999

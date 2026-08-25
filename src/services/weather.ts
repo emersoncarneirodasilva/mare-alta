@@ -18,7 +18,7 @@ interface WeatherApiResponse {
 }
 
 export async function getWeatherData(): Promise<WeatherData> {
-  const apiKey = process.env.WEATHER_API_KEY;
+  const apiKey = process.env.NEXT_PUBLIC_WEATHER_API_KEY;
   const city = "Natal";
 
   const fallbackData: WeatherData = {

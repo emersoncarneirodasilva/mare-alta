@@ -8,7 +8,8 @@ interface CtaProps {
 }
 
 export default function Cta({ title, description, buttonText }: CtaProps) {
-  const whatsappNumber = process.env.WHATSAPP_NUMBER || "+558499999999";
+  const whatsappNumber =
+    process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "+558499999999";
   const message =
     "Olá,%20gostaria%20de%20saber%20mais%20sobre%20as%20reservas%20no%20Maré%20Alta.";
 

@@ -3,7 +3,8 @@ import { MapPin, Mail, MessageSquare } from "lucide-react";
 import receptionImg from "@/public/images/contact-image.webp";
 
 export default function ContactInfoCard() {
-  const phoneNumber = process.env.PHONE_NUMBER || "+55 (84) 99999-9999";
+  const phoneNumber =
+    process.env.NEXT_PUBLIC_PHONE_NUMBER || "+55 (84) 99999-9999";
 
   return (
     <div className="lg:col-span-5 flex flex-col gap-6 justify-between">

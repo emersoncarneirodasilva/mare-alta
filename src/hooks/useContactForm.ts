@@ -19,10 +19,11 @@ export function useContactForm() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.SyntheticEvent) => {
     e.preventDefault();
 
-    const phoneNumber = "5584999999999";
+    const whatsappNumber =
+      process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "+558499999999";
 
     const text =
       `*Nova mensagem pelo Site - Maré Alta Hotel*\n\n` +
@@ -33,7 +34,7 @@ export function useContactForm() {
       `*Mensagem:*\n${formData.message}`;
 
     const encodedText = encodeURIComponent(text);
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedText}`;
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedText}`;
 
     toast.success("Mensagem pronta!", {
       description: "Redirecionando para o WhatsApp do hotel...",

@@ -7,7 +7,8 @@ import { getWeatherData } from "@/src/services/weather";
 export default async function Hero() {
   // Buscando os dados da WeatherAPI (com suporte a SSG/ISR)
   const weather = await getWeatherData();
-  const whatsappNumber = process.env.WHATSAPP_NUMBER || "+558499999999";
+  const whatsappNumber =
+    process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "+558499999999";
   const message =
     "Olá,%20gostaria%20de%20saber%20mais%20sobre%20as%20reservas.";
 

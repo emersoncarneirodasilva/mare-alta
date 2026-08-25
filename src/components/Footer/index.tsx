@@ -6,8 +6,10 @@ import { FOOTER_NAVIGATION, SOCIAL_LINKS } from "@/src/constants/footerData";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
-  const whatsappNumber = process.env.WHATSAPP_NUMBER || "+558499999999";
-  const phoneNumber = process.env.PHONE_NUMBER || "+55 (84) 99999-9999";
+  const whatsappNumber =
+    process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "+558499999999";
+  const phoneNumber =
+    process.env.NEXT_PUBLIC_PHONE_NUMBER || "+55 (84) 99999-9999";
 
   return (
     <footer className="w-full bg-background-footer border-t border-text-muted/10 transition-colors duration-300 text-text-main">

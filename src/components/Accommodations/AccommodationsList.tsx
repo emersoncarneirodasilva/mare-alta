@@ -3,7 +3,8 @@ import { ArrowRight } from "lucide-react";
 import { ACCOMMODATIONS } from "@/src/constants/accommodationsList";
 
 export default function AccommodationsList() {
-  const whatsappNumber = process.env.WHATSAPP_NUMBER || "+558499999999";
+  const whatsappNumber =
+    process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "+558499999999";
 
   return (
     <section className="py-24 lg:py-32 bg-background overflow-hidden">

@@ -1,14 +1,14 @@
-# 🌊 Maré Alta Hotel & Suítes
+# 🌊 Maré Alta Hotel & Suítes (Projeto Conceitual / Portfólio)
 
-> Site institucional moderno, responsivo e de alta performance desenvolvido para o **Maré Alta Hotel**, localizado na charmosa região de Ponta Negra, em Natal (RN). 
+> Site institucional moderno, responsivo e de alta performance desenvolvido como projeto conceitual para o **Maré Alta Hotel**, situado na charmosa região de Ponta Negra, em Natal (RN). 
 
 ---
 
 ## ✨ Sobre o Projeto
 
-O **Maré Alta** foi planejado para oferecer uma experiência digital acolhedora e sofisticada aos futuros hóspedes. O projeto destaca a localização privilegiada na "Cidade do Sol", apresenta comodidades exclusivas, acomodações detalhadas e facilita o canal direto de reservas e dúvidas através de integração fluida com o WhatsApp.
+O **Maré Alta** foi criado como um projeto de demonstração para exibir o desenvolvimento de uma experiência digital sofisticada e acolhedora para o setor hoteleiro. A aplicação destaca a localização privilegiada na "Cidade do Sol", apresenta comodidades exclusivas, acomodações detalhadas e facilita o canal de contato e simulação de reservas através de integração fluida com o WhatsApp.
 
-Construído com uma arquitetura moderna focada em velocidade, o site utiliza exportação estática, permitindo hospedagem ultra rápida e segura em provedores de nuvem como o Cloudflare Pages.
+Construído com uma arquitetura moderna focada em velocidade, o site utiliza exportação estática, permitindo uma performance otimizada e hospedagem rápida em serviços de nuvem como o Cloudflare Pages.
 
 ---
 
@@ -31,12 +31,12 @@ Este projeto foi desenvolvido com uma stack moderna e atualizada:
 | Rota | Descrição |
 | :--- | :--- |
 | `🏠 /` | Página inicial (Hero, diferenciais, destaques e atrações) |
-| `🏨 /o-hotel` | História, diferenciais e espaços do hotel |
+| `🏨 /o-hotel` | História, diferenciais e espaços conceituais do hotel |
 | `🛏️ /acomodacoes` | Catálogo de apartamentos (Individual, Duplo, Familiar e Master) |
-| `✨ /comodidades` | Serviços, lazer e comodidades disponíveis |
-| `📞 /contato` | Canais de atendimento, mapa de localização e formulário |
-| `🔒 /privacidade` | Política de privacidade |
-| `📄 /termos` | Termos de uso do serviço |
+| `✨ /comodidades` | Serviços, lazer e comodidades oferecidas |
+| `📞 /contato` | Canais de atendimento, mapa de localização e formulário de simulação |
+| `🔒 /privacidade` | Política de privacidade (Fictícia) |
+| `📄 /termos` | Termos de uso do serviço (Fictício) |
 
 ---
 

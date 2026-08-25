@@ -17,31 +17,28 @@ interface WeatherApiResponse {
   };
 }
 
-export async function getWeatherData(): Promise<WeatherData> {
+export const fallbackWeatherData: WeatherData = {
+  temp: 28,
+  condition: "Ensolarado",
+  iconUrl: "//cdn.weatherapi.com/weather/64x64/day/113.png",
+};
+
+export async function fetchClientWeatherData(): Promise<WeatherData> {
   const apiKey = process.env.NEXT_PUBLIC_WEATHER_API_KEY;
   const city = "Natal";
 
-  const fallbackData: WeatherData = {
-    temp: 28,
-    condition: "Ensolarado",
-    iconUrl: "//cdn.weatherapi.com/weather/64x64/day/113.png",
-  };
-
-  if (!apiKey) return fallbackData;
+  if (!apiKey) return fallbackWeatherData;
 
   try {
     const res = await fetch(
-      `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=no`,
-      { next: { revalidate: 3600 } },
+      `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=no`,
     );
 
-    if (!res.ok) return fallbackData;
+    if (!res.ok) return fallbackWeatherData;
 
     const data: WeatherApiResponse = await res.json();
-
     const conditionText = data.current.condition.text;
     const isDay = data.current.is_day === 1;
-
     let iconUrl = data.current.condition.icon;
 
     if (!isDay) {
@@ -54,6 +51,6 @@ export async function getWeatherData(): Promise<WeatherData> {
       iconUrl: iconUrl,
     };
   } catch {
-    return fallbackData;
+    return fallbackWeatherData;
   }
 }

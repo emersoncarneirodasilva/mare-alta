@@ -1,12 +1,25 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { MessageSquare, ChevronRight } from "lucide-react";
 import heroImage from "@/public/images/hero-home.webp";
-import { getWeatherData } from "@/src/services/weather";
+import {
+  fetchClientWeatherData,
+  fallbackWeatherData,
+  WeatherData,
+} from "@/src/services/weather";
 
-export default async function Hero() {
-  // Buscando os dados da WeatherAPI (com suporte a SSG/ISR)
-  const weather = await getWeatherData();
+export default function Hero() {
+  const [weather, setWeather] = useState<WeatherData>(fallbackWeatherData);
+
+  useEffect(() => {
+    fetchClientWeatherData().then((data) => {
+      setWeather(data);
+    });
+  }, []);
+
   const whatsappNumber =
     process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "+558499999999";
   const message =
@@ -60,7 +73,7 @@ export default async function Hero() {
               href={`https://wa.me/${whatsappNumber}?text=${message}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/20 font-medium text-sm transition-all"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/25 backdrop-blur-md text-white border border-white/20 font-medium text-sm transition-all"
             >
               <MessageSquare className="w-4 h-4" />
               <span>Fale pelo WhatsApp</span>

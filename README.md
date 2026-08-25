@@ -120,7 +120,7 @@ Antes de iniciar, certifique-se de ter instalado em sua máquina:
 ### 1️⃣ Clone o repositório
 
 ```bash
-git clone [https://github.com/emersoncarneirodasilva/mare-alta.git](https://github.com/emersoncarneirodasilva/mare-alta.git)
+git clone https://github.com/emersoncarneirodasilva/mare-alta.git
 cd mare-alta
 
 ```

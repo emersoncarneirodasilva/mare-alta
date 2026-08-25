@@ -84,7 +84,7 @@ O Header fixo e responsivo permite acesso rápido a todas as páginas do site.
 ### ☀️ Indicador de Clima Inteligente
 Utiliza um componente de cliente isolado (`WeatherBadge`) para buscar as condições meteorológicas e térmicas de Natal sob demanda. O restante do site permanece totalmente estático e veloz.
 
-### 📲 Botões de Ação (CTAs)
+### 📲 Botões de Action (CTAs)
 Direcionam o visitante para a página de acomodações ou iniciam uma conversa pré-formatada no WhatsApp do hotel.
 
 ---
@@ -101,3 +101,125 @@ src/
 
 public/
 └── images/            # Imagens institucionais e identidade visual
+
+```
+
+---
+
+## 📋 Pré-requisitos
+
+Antes de iniciar, certifique-se de ter instalado em sua máquina:
+
+* Node.js (versão compatível com Next.js 16)
+* npm (ou gerenciadores como pnpm, yarn ou bun)
+
+---
+
+## ⚙️ Instalação e Execução
+
+### 1️⃣ Clone o repositório
+
+```bash
+git clone [https://github.com/emersoncarneirodasilva/mare-alta.git](https://github.com/emersoncarneirodasilva/mare-alta.git)
+cd mare-alta
+
+```
+
+### 2️⃣ Instale as dependências
+
+```bash
+npm install
+
+```
+
+### 3️⃣ Configure as variáveis de ambiente
+
+Crie um arquivo chamado `.env.local` na raiz do projeto. Todas as variáveis possuem fallbacks internos:
+
+```env
+NEXT_PUBLIC_WEATHER_API_KEY=sua-chave-weatherapi
+NEXT_PUBLIC_WHATSAPP_NUMBER=558499999999
+NEXT_PUBLIC_PHONE_NUMBER=+55 (84) 99999-9999
+
+```
+
+### 4️⃣ Execute o projeto em desenvolvimento
+
+```bash
+npm run dev
+
+```
+
+A aplicação ficará disponível no navegador em:
+`http://localhost:3000`
+
+---
+
+## 📜 Scripts Disponíveis
+
+| Comando | Descrição |
+| --- | --- |
+| `npm run dev` | Inicia o servidor de desenvolvimento |
+| `npm run build` | Gera a exportação estática de produção |
+| `npm run start` | Executa o servidor de produção local |
+| `npm run lint` | Executa o ESLint para verificação de código |
+
+---
+
+## 🔐 Variáveis de Ambiente
+
+| Variável | Descrição |
+| --- | --- |
+| `NEXT_PUBLIC_WEATHER_API_KEY` | Chave de acesso à WeatherAPI para consulta do clima em Natal |
+| `NEXT_PUBLIC_WHATSAPP_NUMBER` | Número utilizado nos redirecionamentos para o WhatsApp |
+| `NEXT_PUBLIC_PHONE_NUMBER` | Telefone exibido visualmente nos canais de atendimento |
+
+---
+
+## 🚀 Build e Deploy
+
+O projeto está configurado para **Static Export** do Next.js (`output: "export"`).
+Para gerar a versão otimizada de produção:
+
+```bash
+npm run build
+
+```
+
+Será gerada a pasta `out/`, que pode ser publicada facilmente em plataformas de hospedagem estática como:
+
+* ☁️ **Cloudflare Pages**
+* ▲ **Vercel**
+* 🌐 **Netlify**
+* 📂 Servidores web tradicionais
+
+---
+
+## 🧩 Organização do Código
+
+A estrutura foi planejada para facilitar manutenções e escalabilidade:
+
+* Conteúdos textuais centralizados em `src/constants` para fácil alteração;
+* Arquitetura limpa separando componentes estáticos (*Server Components*) de elementos dinâmicos (*Client Components*);
+* Tipagem rigorosa com TypeScript;
+* Organização baseada no App Router do Next.js.
+
+---
+
+## 📈 Performance
+
+O projeto foi desenvolvido priorizando:
+
+* ⚡ Alto desempenho e carregamento instantâneo;
+* 📱 Responsividade fluida em qualquer tela;
+* ♿ Acessibilidade estrutural;
+* 🔍 SEO otimizado;
+* 🎯 Excelente experiência do usuário (UX/UI).
+
+---
+
+## 👨‍💻 Autor
+
+Desenvolvido por **Emerson Carneiro da Silva**.
+
+Projeto conceitual criado com foco em credibilidade, performance, arquitetura moderna de ponta e experiência do usuário.

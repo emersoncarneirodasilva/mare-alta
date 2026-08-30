@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     title: "Comodidades e Estrutura | Maré Alta Hotel",
     description:
       "Desfrute de todo o conforto e conveniência que oferecemos: café da manhã impecável, concierge, Wi-Fi gratuito e proximidade à praia de Ponta Negra.",
-    url: "https://marealtahotel.com.br/comodidades",
+    url: "https://mare-alta.pages.dev/comodidades",
     siteName: "Maré Alta Hotel",
     locale: "pt_BR",
     type: "website",

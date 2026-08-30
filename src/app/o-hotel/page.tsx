@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: "Sobre o Maré Alta Hotel | O seu refúgio em Ponta Negra",
     description:
       "Descubra o que torna o Maré Alta único. Design litorâneo, proximidade à costa e a hospitalidade que você merece em Natal.",
-    url: "https://marealtahotel.com.br/sobre",
+    url: "https://mare-alta.pages.dev/sobre",
     siteName: "Maré Alta Hotel",
     locale: "pt_BR",
     type: "website",

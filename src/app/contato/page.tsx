@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     title: "Contato | Maré Alta Hotel",
     description:
       "Fale diretamente com nossa equipe via WhatsApp ou venha nos visitar em Ponta Negra, Natal - RN.",
-    url: "https://marealtahotel.com.br/contato", // Ajuste para a URL real do seu projeto quando publicar
+    url: "https://mare-alta.pages.dev/contato",
     siteName: "Maré Alta Hotel",
     locale: "pt_BR",
     type: "website",

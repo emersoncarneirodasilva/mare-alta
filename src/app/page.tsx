@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     title: "Maré Alta Hotel & Suítes | Ponta Negra, Natal - RN",
     description:
       "Descubra o conforto, acolhimento e uma localização privilegiada em Ponta Negra, Natal.",
-    url: "https://marealtahotel.com.br",
+    url: "https://mare-alta.pages.dev",
     siteName: "Maré Alta Hotel",
     locale: "pt_BR",
     type: "website",
